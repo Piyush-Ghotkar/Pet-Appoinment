@@ -1,0 +1,87 @@
+.header{ 
+    background-color: #1F2937;
+    /* position: fixed; */
+    width: 100%;
+    /* margin-bottom: 2rem; */
+    
+    
+    /* padding: 1.5rem; */
+}
+    
+
+.icon-img img{
+    width: 3.5rem;  
+    vertical-align: middle;
+}
+.icon-img {   
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    display: inline;
+}
+
+.header-txt{
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline;
+    margin-left: 1rem;
+    vertical-align: middle;
+    display: inline;
+
+}
+
+
+.container {
+    margin: top 20px;
+    padding: 1.5rem 1.5rem;
+    display: block;
+}
+
+.container-center{
+    max-width: 600px;
+    margin: auto;
+}
+
+.card {
+    padding: 1rem 2rem 1.5rem 2rem;
+    border-radius: 0.5rem;
+    margin: 0.7rem;
+    
+}
+
+.offwhitebg {
+    background-color: #f1f3f7;
+}
+
+.card .close {
+   display: block;
+   /* width: 100%; */
+}
+
+.card .close img{
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+    height: 1.2rem;
+    float: right;
+}
+
+.card .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(35, 25, 73);
+}
+
+.card p{
+    margin-block-start: 0.5em;
+    margin-block-end: 0em;
+}
+.card .title-sub {
+    margin-top: 2rem;
+    display: inline;
+}
+.card .date{
+    display: inline-block;
+    float: right;
+    margin-top: 0rem;
+}
