@@ -12,10 +12,10 @@ const initialValues=[];
 function App() {
 
   const [data,setData]=useState(initialValues);
-
+ 
   function setValues(index,petName,ownerName,aptNotes,aptDate){
     var tempData=data;
-
+   
     let obj={
       "id":index,
       "petName":petName,
@@ -24,7 +24,7 @@ function App() {
       "aptDate":aptDate
     }
     tempData.push(obj);
-    setData(tempData);
+    //setData(tempData);
   }
 
 
@@ -49,11 +49,16 @@ function App() {
   FetchData();
   return (
     <>
-    <Routes>
-     {/* <Route path="/" components={{ main:<HeaderNav />   , sidebar: <Appointment apt={data}/> }} />  */}
-      <Route path="/" element={<HeaderNav/>} />
-      <Route path="/addAppointment" element={<AddAppointment{data} />} />
-    </Routes>
+    <HeaderNav />
+    <AddAppointment apt={data}  />
+    <Appointment apt={data} />
+    
+     {/*<Routes>
+      <Route path="/" components={{ main:<HeaderNav />   , sidebar: <Appointment apt={data}/> }} />  */}
+      {/* <Route path="/" element={<HeaderNav/>} />
+      <Route path="/addAppointment" element={<AddAppointment{...data} />} /> 
+      </Routes>*/}
+   
     </>
   );
 }

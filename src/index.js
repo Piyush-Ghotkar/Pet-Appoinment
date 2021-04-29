@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  
+  //*reomoed <React.StrictMode> coz setState updaters run twice in strict mode
     <Router>
       <App />
     </Router>
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

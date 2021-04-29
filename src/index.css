@@ -10,10 +10,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F9FAFB;
-  background-image: url('img/dogs.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #eeeeee;
+  /* background-image: url('img/dogs.jpg'); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
  
 }
 

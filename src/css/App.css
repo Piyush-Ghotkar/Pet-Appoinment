@@ -1,7 +1,9 @@
 .header{ 
-    background-color: #1F2937;
+    background-color: #00adb5;
     /* position: fixed; */
     width: 100%;
+    box-shadow: 0 5px 10px 0 rgb(0 64 128 / 14%);
+    position: fixed;
     /* margin-bottom: 2rem; */
     
     
@@ -43,17 +45,25 @@
     margin: auto;
 }
 
+.topPadding {
+    padding-top: 5rem;
+}
+
 .card {
     padding: 1rem 2rem 1.5rem 2rem;
     border-radius: 0.5rem;
-    margin: 0.7rem;
+    margin-bottom: 1.3rem;
+    box-shadow: 4px 5px 10px 0 rgb(0 64 128 / 14%);
     
 }
 
 .offwhitebg {
-    background-color: #f1f3f7;
+    background-color: #f9f7f7;
 }
 
+li {
+    display: inherit;
+}
 .card .close {
    display: block;
    /* width: 100%; */
@@ -81,7 +91,6 @@
     display: inline;
 }
 .card .date{
-    display: inline-block;
     float: right;
     margin-top: 0rem;
 }
@@ -98,5 +107,80 @@
     cursor: pointer;
     margin-top: 0.5rem;
     margin-right: 3rem;
-
 }
+
+.header-txt-secondary:hover {
+    color: black;
+    background-color: #f9f7f7;
+    border: 1px solid azure;
+}
+
+.formDisplayNone {
+    display: none;
+}
+
+.form-heading{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+
+.row {
+    display: block;
+    margin: 1.3rem;
+    margin-left: 2rem;
+}
+
+.form-label {
+    width:  9rem;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: 'Open Sans'
+}
+
+input , textarea{
+    height: 2rem;
+    width: -webkit-fill-available;
+    background: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid #c3cad8;
+    font-family:sans-serif;
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    font-family: 'Open Sans'
+    
+}
+
+.inputValidation {
+    border-color: red;
+}
+
+.inputValidationOverride {
+    border-color: #c3cad8;
+}
+
+input:hover, textarea:hover{
+    border-color: #00adb5;
+}
+
+.submitBtn{
+    align-self: center;
+    text-align: center;
+    width: 5rem;
+    padding: 0.5rem 0.5rem;
+    border: 1.2px solid #00adb5;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: auto;
+}
+
+.submitBtn:hover{
+    color: white;
+    border-color: white;
+    background: #00adb5;
+}
+
