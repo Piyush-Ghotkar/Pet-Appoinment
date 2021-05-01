@@ -4,7 +4,7 @@ import Appointment from './Appointment';
 import AddAppointment from './AddAppointment';
 import Footer from './Footer';
 import  { useState,useReducer } from 'react';
-// import { Routers,Route, Routes } from 'react-router-dom';
+
 
 const initialValues=[];
 
@@ -105,14 +105,7 @@ function setValues(index,petName,ownerName,aptNotes,aptDate,isItUpdate){
     <HeaderNav toggleForm={toggleForm} SearchApt={SearchApt} />
     <AddAppointment apt={data}  formDisplay={formDisplay} toggleForm={toggleForm} setValues={setValues}   />
     <Appointment apt={filterApts} DeleteAppointment={DeleteAppointment} setSortBy={setSortBy} setSortByDirection={setSortByDirection} sortBy={sortBy} sortByDirection={sortByDirection} />
-    <Footer />
-    
-     {/*<Routes>
-      <Route path="/" components={{ main:<HeaderNav />   , sidebar: <Appointment apt={data}/> }} />  */}
-      {/* <Route path="/" element={<HeaderNav/>} />
-      <Route path="/addAppointment" element={<AddAppointment{...data} />} /> 
-      </Routes>*/}
-   
+    <Footer /> 
     </>
   );
 }

@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from 'react-router-dom';
+
 
 ReactDOM.render(
 
   
   //*reomoed <React.StrictMode> coz setState updaters run twice in strict mode
-    <Router>
+   
       <App />
-    </Router>
+   
   ,
   document.getElementById('root')
 );
