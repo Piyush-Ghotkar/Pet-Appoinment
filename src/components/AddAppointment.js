@@ -4,20 +4,7 @@ import {useState} from 'react';
 
 function AddAppointment(props){
 
- //console.log("last element", props.apt[props.apt.length-1]); To get last element
-
  const [warning,setWarning]=useState(false);
- const [formDisplay,setformDisplay]=useState(true);
-
-//  let obj={
-//     "id":'index',
-//     "petName":'babu',
-//     "ownerName":'ownerName',
-//     "aptNotes":'aptNotes',
-//     "aptDate":'aptDate'
-//   }
-//   tempData.push(obj);   
- //props.setData(tempData);
 
 
  var index="",petName="",ownerName="",aptNotes="",aptDate="";
@@ -35,53 +22,46 @@ function descriptionHandler(e){
 }
 
 function onSubmitHandler(){
-    if(petName=="" || aptDate=="") setWarning(true);
-    else setWarning(false);
-    
-    index=props.apt[props.apt.length-1].id + 1;
-    
-    var tempData=props.apt;
-    let obj={
-        "id":index,
-        "petName":petName,
-        "ownerName":ownerName,
-        "aptNotes":aptNotes,
-        "aptDate":aptDate
-      }
-      tempData.push(obj);  
-      console.log(props.apt);
+    if(petName==="" || aptDate==="") setWarning(true);
+    else{
+        setWarning(false);
+        index=props.apt.length;
+        props.setValues(index,petName,ownerName,aptNotes,aptDate,1);
+        document.getElementById("add-apt-form").reset();
+        props.toggleForm()
+    }
 }
 
 function formCloseHandler(){
-    setformDisplay(false);
+    props.toggleForm();
 }
 
  return (
-    <div className={"container container-center topPadding " + (formDisplay ? '' : 'formDisplayNone')}>
+    <div className={"container container-center topPadding " + (props.formDisplay ? '' : 'formDisplayNone')}>
         <div className="card offwhitebg form-container">
             <div className="close">
                 <img src={close} alt="close" onClick={formCloseHandler} />
             </div>
             <div className="form-heading title">Add New Appointment</div>
-            <form>
+            <form id="add-apt-form">
                 <div className="row">
-                <label for="petName" className="form-label">Pet Name</label>
+                <label htmlFor="petName" className="form-label">Pet Name</label>
                 <input type="text" id='petName' placeholder={(warning ?"Required !!" :'')} className={(warning ?'inputValidation' :'inputValidationOverride')}  onChange={petNameHandler} />
                 </div>
 
                 <div className="row">
-                <label for="ownerName" className="form-label">Owner Name</label>
-                <input type="text" id='ownerName' onChange={ownerNameHandler} />
+                <label htmlFor="ownerName" className="form-label">Owner Name</label>
+                <input type="text"  id='ownerName' onChange={ownerNameHandler} />
                 </div>
 
                 <div className="row">
-                <label for="date" className="form-label">Date-Time </label>
+                <label htmlFor="date" className="form-label">Date-Time </label>
                 <input type="datetime-local" id='date' className={(warning ?'inputValidation' :'inputValidationOverride')} onChange={dateHandler} />
                 </div>
 
                 <div className="row">
-                <label for="description" className="form-label">Description</label>
-                <textarea rows="5"  id='description' onChange={descriptionHandler} ></textarea>
+                <label htmlFor="description" className="form-label">Description</label>
+                <textarea rows="5"    id='description' onChange={descriptionHandler} ></textarea>
                 </div>
 
                 <div className="submitBtn" onClick={onSubmitHandler}>Submit</div>

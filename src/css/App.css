@@ -80,12 +80,14 @@ li {
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(35, 25, 73);
+    margin-bottom: 0.5rem;
 }
 
-.card p{
+/* .card p{
     margin-block-start: 0.5em;
     margin-block-end: 0em;
-}
+} */
+
 .card .title-sub {
     margin-top: 2rem;
     display: inline;
@@ -93,6 +95,10 @@ li {
 .card .date{
     float: right;
     margin-top: 0rem;
+}
+
+.card .description {
+    margin-top: 0.2rem;
 }
 
 
@@ -184,3 +190,99 @@ input:hover, textarea:hover{
     background: #00adb5;
 }
 
+
+footer {
+    background-color: #1F2937;
+    height: 5.5rem;
+    padding: 2rem 2rem;
+    color: white;
+}
+
+.footer-bottom {
+    background-color: #00adb5;
+    height: 1rem;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* .footer-fix{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+} */
+
+.footer-img {
+    text-align: center;
+}
+footer img{
+    width: 2rem;
+    margin: 0.5rem 1rem;
+    cursor: pointer;
+    padding: 0.2rem;
+   
+}
+
+
+.header input {
+    display: inline-block;
+    background-color: white;
+    max-width: 590px;
+    margin-left: 9.7rem;
+   
+}
+
+
+.dropdown {
+    display: inline-block;
+    float: right;
+}
+
+.sortby-btn{
+    display: block;
+    color: black;
+    background-color: #D1D5DB;
+    float: right;
+    padding: 0.5rem 0.5rem;
+    /* border: 1px solid black; */
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+
+}
+.sortby-btn img {
+    width: 1rem;
+    margin-left: 0.2rem;
+    vertical-align: middle;
+}
+
+.dropdown:hover .sortby-btn{
+    background-color: #00adb5;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    min-width: 160px;
+    margin-top: 2.3rem;
+    background-color: #E5E7EB;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: small;
+}
+.dropdown-content li{
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content li:hover{
+    background-color: #00adb5;
+}
+
+.dropdown-content .active{
+    background-color: #D1D5DB;
+}
