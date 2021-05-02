@@ -286,3 +286,19 @@ footer img{
 .dropdown-content .active{
     background-color: #D1D5DB;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .icon-img img{
+        width: 3rem;
+    }
+    .header input {
+     display: none ;
+    }
+
+    .header-txt-secondary {
+        padding: 0.3rem 0.5rem;
+        margin-right: 1.5rem;
+    }
+  }
