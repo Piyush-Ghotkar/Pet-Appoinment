@@ -291,7 +291,12 @@ footer img{
 @media only screen and (max-width: 600px) {
 
     .icon-img img{
-        width: 3rem;
+        width: 2rem;
+        margin: 0.2rem;
+    }
+    .header-txt{
+        font-size: 1.2rem;
+        margin-left: 0.7rem;
     }
     .header input {
      display: none ;
@@ -300,5 +305,10 @@ footer img{
     .header-txt-secondary {
         padding: 0.3rem 0.5rem;
         margin-right: 1.5rem;
+        margin: 0.2rem;
+    }
+
+    .topPadding{
+        padding-top: 5rem;
     }
   }
